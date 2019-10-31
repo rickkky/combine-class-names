@@ -6,7 +6,7 @@ export type ClassNameItem = string | ClassNamesDist
 
 export type ClassNames = (ClassNameItem | ClassNameItem[])[]
 
-const hasOwnProperty = {}.hasOwnProperty
+const hasOwnProperty = Object.prototype.hasOwnProperty
 
 export function traverseClassNames(
   callback: (className: string) => void,
