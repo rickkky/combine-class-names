@@ -29,7 +29,6 @@
     "test": "tsdx test",
     "lint": "tsdx lint",
     "commit:cz": "git-cz",
-    "cm": "npm run commit:cz",
     "release": "standard-version"
   },
   "husky": {
