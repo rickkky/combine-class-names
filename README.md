@@ -12,12 +12,12 @@ npm i -S combine-class-names
 ## API
 
 ```typescript
-function combineClassNames(
-  ...items:
-    | string
-    | { [className: string]: boolean }
-    | (string | { [className: string]: boolean })[]
-): string[]
+type ClassNameItem =
+  | string
+  | { [className: string]: boolean }
+  | (string | { [className: string]: boolean })[]
+
+function combineClassNames(...items: ClassNameItem[]): string[]
 ```
 
 ## Example
