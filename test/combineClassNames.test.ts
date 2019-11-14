@@ -1,10 +1,16 @@
 import combineClassNames, { ClassNames } from '../src'
 
+describe('housekeeping', () => {
+  it('shoule be defined as a function', () => {
+    expect(typeof combineClassNames).toBe('function')
+  })
+})
+
 const test = (received: ClassNames, expected: string[]) => {
   expect(combineClassNames(...received)).toStrictEqual(expected)
 }
 
-describe('blah', () => {
+describe('functionality', () => {
   it('simple case', () => {
     test([''], [])
 
