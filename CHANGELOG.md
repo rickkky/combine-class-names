@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.1.0](https://github.com/rickkky/combine-class-names/compare/v1.0.4...v1.1.0) (2020-01-13)
+
+
+### Features
+
+* export joinClassNames method ([019b169](https://github.com/rickkky/combine-class-names/commit/019b1690649976a0ed020408d0b5b995bd854fb8))
+
 ### [1.0.4](https://github.com/rickkky/combine-class-names/compare/v1.0.3...v1.0.4) (2020-01-13)
 
 
