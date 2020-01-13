@@ -42,7 +42,7 @@ function traverseClassNames(callback) {
   });
 }
 
-function combineClassNames() {
+var combineClassNames = function combineClassNames() {
   var classList = [];
   var cache = {};
 
@@ -61,6 +61,9 @@ function combineClassNames() {
 
   traverseClassNames.apply(void 0, [callback].concat(items));
   return classList;
+};
+function joinClassNames() {
+  return combineClassNames.apply(void 0, arguments).join(' ');
 }
 
 /*!
@@ -70,5 +73,5 @@ function combineClassNames() {
 */
 
 export default combineClassNames;
-export { isValidClassName, traverseClassNames, traverseClassString };
+export { combineClassNames, isValidClassName, joinClassNames, traverseClassNames, traverseClassString };
 //# sourceMappingURL=combine-class-names.esm.js.map

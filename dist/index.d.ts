@@ -6,6 +6,7 @@ declare type ClassNamesDist = {
 declare type ClassNameItem = string | ClassNamesDist | undefined;
 declare type ClassNames = (ClassNameItem | ClassNameItem[])[];
 declare function traverseClassNames(callback: (className: string) => void, ...items: ClassNames): void;
-declare function combineClassNames(...items: ClassNames): string[];
+declare const combineClassNames: (...items: (string | ClassNamesDist | ClassNameItem[] | undefined)[]) => string[];
+declare function joinClassNames(...items: ClassNames): string;
 export default combineClassNames;
-export { isValidClassName, traverseClassString, ClassNamesDist, ClassNameItem, ClassNames, traverseClassNames };
+export { combineClassNames, joinClassNames, isValidClassName, traverseClassString, ClassNamesDist, ClassNameItem, ClassNames, traverseClassNames };

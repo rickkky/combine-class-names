@@ -8,6 +8,7 @@ import combineClassNames from './combineClassNames'
 
 export default combineClassNames
 
+export * from './combineClassNames'
 export * from './isValidClassName'
 export * from './traverseClassString'
 export * from './traverseClassNames'

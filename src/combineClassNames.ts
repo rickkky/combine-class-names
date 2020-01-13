@@ -3,7 +3,7 @@ import traverseClassNames, {
   ClassNamesDist,
 } from './traverseClassNames'
 
-export default function combineClassNames(...items: ClassNames) {
+export const combineClassNames = function(...items: ClassNames) {
   const classList: string[] = []
   const cache: ClassNamesDist = {}
 
@@ -20,3 +20,9 @@ export default function combineClassNames(...items: ClassNames) {
 
   return classList
 }
+
+export function joinClassNames(...items: ClassNames) {
+  return combineClassNames(...items).join(' ')
+}
+
+export default combineClassNames

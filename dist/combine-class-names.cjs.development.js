@@ -44,7 +44,7 @@ function traverseClassNames(callback) {
   });
 }
 
-function combineClassNames() {
+var combineClassNames = function combineClassNames() {
   var classList = [];
   var cache = {};
 
@@ -63,6 +63,9 @@ function combineClassNames() {
 
   traverseClassNames.apply(void 0, [callback].concat(items));
   return classList;
+};
+function joinClassNames() {
+  return combineClassNames.apply(void 0, arguments).join(' ');
 }
 
 /*!
@@ -71,8 +74,10 @@ function combineClassNames() {
   https://github.com/rickkky/combine-class-names
 */
 
+exports.combineClassNames = combineClassNames;
 exports.default = combineClassNames;
 exports.isValidClassName = isValidClassName;
+exports.joinClassNames = joinClassNames;
 exports.traverseClassNames = traverseClassNames;
 exports.traverseClassString = traverseClassString;
 //# sourceMappingURL=combine-class-names.cjs.development.js.map
