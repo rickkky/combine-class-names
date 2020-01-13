@@ -34,6 +34,7 @@ describe('functionality', () => {
   it('complex case', () => {
     test(
       [
+        undefined,
         'a -b',
         ['7c', '54', { 'd8a_c ': true }],
         ['ac&a eb__a'],

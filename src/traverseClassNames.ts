@@ -2,7 +2,7 @@ import traverseClassString from './traverseClassString'
 
 export type ClassNamesDist = { [className: string]: boolean }
 
-export type ClassNameItem = string | ClassNamesDist
+export type ClassNameItem = string | ClassNamesDist | undefined
 
 export type ClassNames = (ClassNameItem | ClassNameItem[])[]
 

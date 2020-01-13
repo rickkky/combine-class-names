@@ -3,7 +3,7 @@ declare function traverseClassString(callback: (className: string) => void, clas
 declare type ClassNamesDist = {
     [className: string]: boolean;
 };
-declare type ClassNameItem = string | ClassNamesDist;
+declare type ClassNameItem = string | ClassNamesDist | undefined;
 declare type ClassNames = (ClassNameItem | ClassNameItem[])[];
 declare function traverseClassNames(callback: (className: string) => void, ...items: ClassNames): void;
 declare function combineClassNames(...items: ClassNames): string[];
